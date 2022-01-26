@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint A1 Zoo - Sarah Block</title>
+    <link href="SprintA1Zoo.css" rel="stylesheet">
+    <script type="module" src="SprintA1Zoo.js" defer></script>
+    <script type="module" src="zooAnimal.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <h1 id="pageTitle">Sprint A1 Zoo - Sarah Block</h1>
+        
+        <h2 id="zooTitle">Zoo</h2>
+            <div id="zooDiv">
+                <!--Insert zoo values. -->
+            </div>
+
+        <h2 id="animalTitle">Animals</h2>
+            <div id="animalDiv">
+                <!--Insert animal values. -->
+               
+                <div class="animalCard">
+                    <animal-card name="Harry" type="Hummingbird"></animal-card>
+                    <div slot="age"><b>Age:</b> 1</div>
+                    <div slot="weight"><b>Weight:</b> 2.2</div>
+                    <div slot="gender"><b>Gender:</b> Male</div>
+                    <div slot="isPregnant"><b>isPregnant:</b> false</div>
+                </div>
+
+                <div class="animalCard">
+                    <animal-card name="Perry" type="Platypus"></animal-card>
+                    <div slot="age"><b>Age:</b> 2</div>
+                    <div slot="weight"><b>Weight:</b> 5.3</div>
+                    <div slot="gender"><b>Gender:</b> Female</div>
+                    <div slot="isPregnant"><b>isPregnant:</b> true</div>
+                </div>
+
+                <div class="animalCard">
+                    <animal-card name="Sophie" type="Shark"></animal-card>
+                    <div slot="age"><b>Age:</b> 3</div>
+                    <div slot="weight"><b>Weight:</b> 852</div>
+                    <div slot="gender"><b>Gender:</b> Female</div>
+                    <div slot="isPregnant"><b>isPregnant:</b> false</div>
+                </div>
+
+                <div class="animalCard">
+                    <animal-card name="Chloe" type="Chimpanzee"></animal-card>
+                    <div slot="age"><b>Age:</b> 2</div>
+                    <div slot="weight"><b>Weight:</b> 73.5</div>
+                    <div slot="gender"><b>Gender:</b> Female</div>
+                    <div slot="isPregnant"><b>isPregnant:</b> false</div>
+                </div>
+
+            </div>
+    </div>
+
+    <script>
+        // Implement a service worker in your Zoo application.
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("serviceWorker.js")
+            .then(registration => {
+                const scope = registration.scope;
+                console.log(`Service Worker registered properly at ${scope}`);
+            })
+            .catch ( error => {
+                console.log(`Service Worker NOT registered`);
+            });
+        } else {
+            console.log(`Service Worker is NOT available`);
+        }
+    </script>
+
+</body>
+</html>
